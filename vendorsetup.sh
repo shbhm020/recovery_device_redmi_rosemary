@@ -46,8 +46,8 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export FOX_BUILD_TYPE="Beta"
 
 		# Device info
-		export OF_AB_DEVICE=1
-		export OF_VIRTUAL_AB_DEVICE=1
+		export FOX_AB_DEVICE=1
+		export FOX_VIRTUAL_AB_DEVICE=1
 		export TARGET_DEVICE_ALT="secret, maltose"
 		
 		# OTA / DM-Verity / Encryption
@@ -57,7 +57,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_DONT_PATCH_ON_FRESH_INSTALLATION=1
 		export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 		export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
-		export OF_SKIP_FBE_DECRYPTION_SDKVERSION=35 # Don't try to decrypt A15(?)
+  		#export OF_SKIP_FBE_DECRYPTION_SDKVERSION=34 # Don't try to decrypt A14(?)
 		export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
 
 		# Display / Leds
@@ -72,6 +72,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 
 		# Other OrangeFox configs
 		export OF_ENABLE_LPTOOLS=1
+  		export FOX_USE_NANO_EDITOR=1
 		export OF_ALLOW_DISABLE_NAVBAR=0
         export OF_QUICK_BACKUP_LIST="/boot;/data;"
 		export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800" # Tue Jan 1 2019 00:00:00 GMT
